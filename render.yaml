@@ -1,0 +1,20 @@
+services:
+  # Backend API Service
+  - type: web
+    name: nexacore-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false  # Set this in Render dashboard
+      - key: PORT
+        value: 3000
+      - key: CORS_ORIGIN
+        sync: false  # Set to your frontend URL
+    autoDeploy: true

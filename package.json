@@ -1,0 +1,50 @@
+{
+  "name": "file-upload-validation",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --runInBand --testTimeout=30000",
+    "lint": "eslint src --max-warnings=0",
+    "bench": "node tools/bench_queries.js",
+    "test:coverage": "jest --coverage",
+    "bench:search": "node perf/run_search_bench.js",
+    "bench:index": "node perf/run_index_bench.js",
+    "bench:parse": "node perf/parse_autocannon_json.js",
+    "lighthouse:test": "lighthouse http://localhost:3001 --output=json --output-path=perf-reports/lh-report.json --chrome-flags=\"--headless\""
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/tests/setupEnv.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/frontend/",
+      "<rootDir>/tests/e2e/"
+    ]
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "mammoth": "^1.11.0",
+    "mongoose": "^8.19.3",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.7.0",
+    "pdf-parse": "^1.1.1",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "autocannon": "^8.0.0",
+    "eslint": "^8.57.0",
+    "glob": "^11.0.3",
+    "jest": "^29.7.0",
+    "lighthouse": "^12.8.2",
+    "puppeteer": "^24.29.1",
+    "supertest": "^7.1.4"
+  }
+}
