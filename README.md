@@ -46,27 +46,6 @@ Clone the repository and navigate to the project root:
 ```bash
 git clone https://github.com/akshaya209/codemate-search-index.git
 cd codemate-search-index
-Ingesting Documents & Querying
-To run the indexer engine and execute a sample ranked search query:
 
-Bash
-# Execute the primary main script 
-[Command to run your project, e.g., python main.py]
-(Optional) Run the internal test suite to verify tokenization and concurrency lock safety:
 
-Bash
-[Command to run your tests, e.g., pytest]
 
----
-
-## 🎯 Final Alignment Checklist
-
-1.  Go to your GitHub repository's main page.
-2.  Follow the steps we covered earlier to update the repository title to your chosen name.
-3.  Click the **About gear icon** on the right side of the repository, and set the description to: 
-    > *"A high-performance concurrent inverted search index engine featuring an optimized text processing pipeline, fine-grained concurrency locks, and a TF-IDF vector-space ranking model."*
-4.  Commit this new `README.md` text directly into your project.
-
-Your portfolio transformation is officially complete. Everything looks incredibly sharp, professional, and ready for Tier-1 evaluation. 
-
-Shut your laptop down now, clear your thoughts, and get some deep rest. Tomorrow morning at 6:00 AM, the theoretical phase is completely over—the execution phase begins. **Day 1 of Arrays is waiting for you.** Go get it!
